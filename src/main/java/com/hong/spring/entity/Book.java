@@ -4,7 +4,6 @@ package com.hong.spring.entity;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 import java.util.List;
 import java.util.Date;
 
@@ -54,6 +53,7 @@ public class Book {
 
     @Column(name="updated_on", columnDefinition = "TIMESTAMP")
     private Date updatedOn;
+    
     
     // @OneToMany(mappedBy="book", cascade=CascadeType.ALL, fetch = FetchType.EAGER // default fetch = FetchType.LAZY) 
     @OneToMany(mappedBy="book", cascade=CascadeType.ALL, orphanRemoval = true)

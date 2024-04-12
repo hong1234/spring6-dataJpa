@@ -15,7 +15,7 @@ import java.util.Properties;
 @AllArgsConstructor
 public class HibernateConfig {
 
-    public static final String JPA_REPO_LOCATION = "com.hong.spring.repo";
+    // public static final String JPA_REPO_LOCATION = "com.hong.spring.repo";
 
     private final DatabaseProperties dbProperties;
 

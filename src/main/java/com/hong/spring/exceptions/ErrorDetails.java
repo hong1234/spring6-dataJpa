@@ -7,8 +7,8 @@ import java.util.Map;
 public class ErrorDetails {
 
 	// private HttpStatus status;
-    	private String message;
-    	private Map<String, Object> additionalData = new HashMap<>();
+    private String message;
+    private Map<String, Object> additionalData = new HashMap<>();
  
 	// public HttpStatus getStatus() {
 	// 	return status;
