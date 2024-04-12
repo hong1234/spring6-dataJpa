@@ -18,14 +18,14 @@ import com.hong.spring.repo.ReviewRepository;
 import com.hong.spring.exceptions.ErrorDetails;
 import com.hong.spring.exceptions.ResourceNotFoundException;
 
+import lombok.AllArgsConstructor;
+
 @Service
+@AllArgsConstructor
 public class BookService {
 
-    @Autowired
-    BookRepository bookRepository;
-
-    @Autowired
-    ReviewRepository reviewRepository;
+    private final BookRepository bookRepository;
+    private final ReviewRepository reviewRepository;
 
     public Iterable<Book> getAllBooks(){
         return bookRepository.findAll();
