@@ -10,10 +10,9 @@
 	</parent>
 
 	<groupId>com.hong</groupId>
-	<artifactId>SpringDataJPAConsoleH3</artifactId>
+	<artifactId>SpringDataJpaH</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
-	<name>SpringDataJPAConsoleH3</name>
+	<name>SpringDataJpaH</name>
 	<description>Demo project for Spring Data JPA</description>
 	
 	<properties>

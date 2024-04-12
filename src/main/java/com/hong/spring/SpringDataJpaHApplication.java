@@ -9,7 +9,7 @@ import com.hong.spring.service.BookService;
 // import com.hong.spring.entity.Book;
 // import java.util.Date;
 
-public class SpringDataJpaConsoleH2Application {
+public class SpringDataJpaHApplication {
 
 	public static void main(String[] args) {
 
