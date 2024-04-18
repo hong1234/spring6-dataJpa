@@ -27,14 +27,14 @@ import lombok.AllArgsConstructor;
 @Configuration
 @AllArgsConstructor
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackages = {DataJpaConfig.JPA_REPO_LOCATION}) // @EnableJpaRepositories(basePackages = HibernateConfig.JPA_REPO_LOCATION) 
+@EnableJpaRepositories(basePackages = {DataJpaConfig.JPA_REPO_LOCATION}) 
 public class DataJpaConfig {
 
     public static final String JPA_REPO_LOCATION = "com.hong.spring.repo";     // location of the custom repository-interfaces
     public static final String JPA_ENTITY_LOCATION = "com.hong.spring.entity"; // location of the entities where persistence metadata can be found
 
     private final DataSource dataSource;
-    private final HibernateConfig hibernateConfig;
+    private final DatabaseProperties dbProperties;
     
     @Bean
     public PlatformTransactionManager transactionManager() {
@@ -47,7 +47,7 @@ public class DataJpaConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 
         HibernateJpaVendorAdapter jpaVendor = new HibernateJpaVendorAdapter();
-        Properties jpaProperties = hibernateConfig.hibernateProperties();
+        Properties jpaProperties = dbProperties.hibernateProperties();
 
         LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
         factory.setDataSource(dataSource);
