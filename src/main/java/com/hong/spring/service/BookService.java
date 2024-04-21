@@ -85,7 +85,7 @@ public class BookService {
 		// Save a new book
 		Book book = new Book();
 		book.setTitle("Spring in Action");
-		book.setContent("news in Spring 6");
+		book.setContent("news by Spring 6");
 		book.setCreatedOn(new Date());
 		storeBook(book);
 

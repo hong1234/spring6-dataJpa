@@ -3,14 +3,15 @@ package com.hong.spring.config;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.Properties;
-import org.springframework.stereotype.Component;
-import org.springframework.beans.factory.annotation.Value;
+// import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.beans.factory.annotation.Value;
 
 
 @Getter
 @Setter
-@Component
+@Configuration // @Component
 @PropertySource("classpath:database.properties")
 public class DatabaseProperties {
 
@@ -40,12 +41,12 @@ public class DatabaseProperties {
 
     public Properties hibernateProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.show_sql", getShowSql());
-        properties.put("hibernate.hbm2ddl.auto", getHbm2ddlAuto());
-        // properties.put("hibernate.format_sql", getFormatSql());
-        // properties.put("hibernate.dialect", getDialect());
-        // properties.put("hibernate.hbm2ddl.import_files", getImportFile());
-        // properties.put("hibernate.generate_statistics", getGenerateStats());
+        properties.put("hibernate.show_sql", showSql);
+        properties.put("hibernate.hbm2ddl.auto", hbm2ddlAuto);
+        // properties.put("hibernate.format_sql", formatSql);
+        // properties.put("hibernate.dialect", dialect);
+        // properties.put("hibernate.hbm2ddl.import_files", importFile);
+        // properties.put("hibernate.generate_statistics", generateStats);
         return properties;
     }
 }
