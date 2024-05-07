@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Value;
 @Configuration // @Component
 @PropertySource("classpath:database.properties")
 public class DatabaseProperties {
-
+    // data source related
     @Value("${url}")
     private String url;
     @Value("${driver}")
@@ -26,6 +26,7 @@ public class DatabaseProperties {
     @Value("${init-db:false}")
     private String initDatabase;
 
+    // Jpa related 
     @Value("${hibernate.dialect}")
     private String dialect;
     @Value("${hibernate.show_sql}")

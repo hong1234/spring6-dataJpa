@@ -6,8 +6,6 @@ import com.hong.spring.config.AppConfig;
 import com.hong.spring.service.CustomerService;
 import com.hong.spring.service.BookService;
 
-// import com.hong.spring.entity.Book;
-// import java.util.Date;
 
 public class SpringDataJpaHApplication {
 
